@@ -8,3 +8,24 @@
 // insertOne()
 // updateOne()
 // Export the ORM object in module.exports.
+
+var connection = require ('../config/connection.js');
+
+var orm = {
+    selectAll: function(whatToSelect, tableInput) {
+        var queryString = 'SELECT ?? FROM ??';
+        connection.query(queryString, [whatToSelect, tableInput], function(err, result) {
+            if (err) throw err;
+            console.log(result);
+        });
+    },
+
+insert()
+
+
+
+}
+
+
+
+module.exports=orm;

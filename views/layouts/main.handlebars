@@ -1,1 +1,32 @@
 {{!-- Setup the main.handlebars file so it's able to be used by Handlebars. --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {{!-- Bootstrap CDN --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {{!-- CSS Link --}}
+    <link rel='stylesheet' type='text/css' href='/assets/css/burger_style.css'>
+
+    {{!-- JQuery Link --}}
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+    <title>Eat da Burger Restaurant</title>
+</head>
+<body>
+
+
+    <div class="text-center">
+    <img src="public/assets/img/burger.jpg" class="rounded" alt="smiling burger">
+    </div>
+
+
+    {{{body}}}
+    
+</body>
+</html>

@@ -1,5 +1,6 @@
 $(function() {
-    $('.create-form').on('submit', function (event) {
+    $('#create-burger').on('submit', function (event) {
+        alert('clicked!');
         event.preventDefault();
 
         var newBurger = {
@@ -21,18 +22,18 @@ $(function() {
 
     $('.devourIt').on('click', function(event) {
         var id = $(this).data('id');
-        var devouredBurger = $(this).data('devouredBurger');
+        var devouredBurger = $(this).data('devouredburger');
 
-        var hasbeenDevoured = {
+        var hasBeenDevoured = {
             devoured: devouredBurger
         };
 
-        $.ajax('/api/cats/' + id, {
+        $.ajax('/api/burgers/' + id, {
             type: 'PUT',
-            data: hasbeenDevoured
+            data: hasBeenDevoured
         }).then(
             function() {
-                console.log('updated state to', hasbeenDevoured);
+                console.log('updated state to', hasBeenDevoured);
                 location.reload();
             }
         );
